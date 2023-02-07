@@ -1,3 +1,11 @@
+@font-face {
+  font-family: BigShoulders;
+  src: url(./fonts/BigShouldersDisplay-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: LexendDeca;
+  src: url(./fonts/LexendDeca-VariableFont_wght.ttf);
+}
 * {
   margin: 0;
   padding: 0;
@@ -12,27 +20,105 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
 }
 
 main {
-  width: 80%;
+  margin: 3em 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 85%;
+  max-width: 20em;
+  min-width: 15em;
+  border-radius: 5px;
 }
 main .column {
-  background-color: blue;
-  padding: 1em;
+  padding: 2em;
 }
 main .column img {
+  width: 3em;
+}
+main .column h1 {
+  color: hsla(0deg, 0%, 100%, 0.75);
+  font-family: BigShoulders;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.5em 0;
+}
+main .column p {
+  width: 90%;
+  color: hsla(0deg, 0%, 100%, 0.75);
+  font-family: LexendDeca;
+  font-weight: 400;
+  font-size: 1em;
+  padding: 1em 0;
+  padding-bottom: 1.5em;
+}
+main .column button {
+  background-color: hsla(0deg, 0%, 100%, 0.75);
+  border: none;
+  border-radius: 25px;
   padding: 1em;
+  width: 10em;
+  font-family: LexendDeca;
+  cursor: pointer;
 }
 main .sedan {
   background-color: hsl(31deg, 77%, 52%);
+  border-radius: 5px 5px 0 0;
+}
+main .sedan button {
+  color: hsl(31deg, 77%, 52%);
 }
 main .suv {
   background-color: hsl(184deg, 100%, 22%);
 }
+main .suv button {
+  color: hsl(184deg, 100%, 22%);
+}
 main .lux {
   background-color: hsl(179deg, 100%, 13%);
+  border-radius: 0 0 5px 5px;
+}
+main .lux button {
+  color: hsl(179deg, 100%, 13%);
+}
+
+@media (min-width: 600px) {
+  .wrapper {
+    width: 100vw;
+    height: 100vh;
+  }
+  main {
+    max-width: 63em;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-evenly;
+    border-radius: 5px;
+  }
+  main h1 {
+    padding: 2em;
+  }
+  main .column {
+    position: relative;
+    height: 100%;
+  }
+  main .column p {
+    width: 83%;
+    line-height: 2em;
+    padding-bottom: 5em;
+  }
+  main .column button {
+    position: absolute;
+    bottom: 3em;
+  }
+  main .sedan {
+    border-radius: 5px 0 0 5px;
+  }
+  main .lux {
+    border-radius: 0 5px 5px 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

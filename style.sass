@@ -1,3 +1,10 @@
+@font-face 
+    font-family: BigShoulders
+    src: url(./fonts/BigShouldersDisplay-VariableFont_wght.ttf)
+@font-face 
+    font-family: LexendDeca
+    src: url(./fonts/LexendDeca-VariableFont_wght.ttf)
+
 
 $Bright_orange: hsl(31, 77%, 52%)
 $Dark_cyan: hsl(184, 100%, 22%)
@@ -9,8 +16,6 @@ $Transparent_white: hsla(0, 0%, 100%, 0.75) //(paragraphs)
 $Very_light_gray : hsl(0, 0%, 95%)//(background, headings, buttons)
 
 
-
-
 *
     margin: 0
     padding: 0
@@ -20,22 +25,95 @@ body
     background-color: $Transparent_white
 
 .wrapper
+    // width: 100vw
+    // height: 100vh
     display: flex
     justify-content: center
     align-items: center
-    flex-direction: column
 
 main
-    width: 80%
+    margin: 3em 0
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+    // display: grid
+    // grid-template-columns: auto auto auto
+    // justify-content: space-evenly
+    width: 85%
+    max-width: 20em
+    min-width: 15em
+    border-radius: 5px
     .column
-        background-color: blue
-        padding: 1em
+        padding: 2em
         img
+            // padding: 1em
+            width: 3em
+        h1
+            color: $Transparent_white
+            font-family: BigShoulders
+            font-weight: 700
+            text-transform: uppercase
+            padding: 0.5em 0
+        p
+            width: 90%
+            color: $Transparent_white
+            font-family: LexendDeca
+            font-weight: 400
+            font-size: 1em
+            padding: 1em 0
+            padding-bottom: 1.5em
+        button
+            background-color: $Transparent_white
+            border: none
+            border-radius: 25px
             padding: 1em
+            width: 10em
+            font-family: LexendDeca
+            cursor: pointer
     .sedan
         background-color: $Bright_orange
+        border-radius: 5px 5px 0 0
+        button
+            color: $Bright_orange
     .suv
         background-color: $Dark_cyan
+        button
+            color: $Dark_cyan
     .lux
         background-color: $Very_dark_cyan
+        border-radius: 0 0 5px 5px
+        button
+            color: $Very_dark_cyan
+
+@media (min-width:600px)
+    .wrapper
+        width: 100vw
+        height: 100vh
+    main
+        max-width: 63em
+        // height: 30em
+        display: grid
+        grid-template-columns: auto auto auto
+        justify-content: space-evenly
+        border-radius: 5px
+        h1
+            padding: 2em
+        .column
+            // padding-right: 7em
+            position: relative
+            height: 100%
+            p
+                width: 83%
+                line-height: 2em
+                padding-bottom: 5em
+            button
+                position: absolute
+                bottom: 3em
+                    
+        .sedan
+            border-radius: 5px 0 0 5px
+        .lux
+            border-radius: 0 5px 5px 0
         
