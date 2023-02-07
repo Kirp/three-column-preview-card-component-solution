@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 15px;
+  background-color: hsla(0deg, 0%, 100%, 0.75);
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+main {
+  width: 80%;
+}
+main .column {
+  background-color: blue;
+  padding: 1em;
+}
+main .column img {
+  padding: 1em;
+}
+main .sedan {
+  background-color: hsl(31deg, 77%, 52%);
+}
+main .suv {
+  background-color: hsl(184deg, 100%, 22%);
+}
+main .lux {
+  background-color: hsl(179deg, 100%, 13%);
+}
+
+/*# sourceMappingURL=style.css.map */
